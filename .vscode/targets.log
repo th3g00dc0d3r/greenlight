@@ -2,16 +2,24 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target 'all'.  Stop.
 
 # GNU Make 4.3
+ 
 # Built for x86_64-redhat-linux-gnu
+ 
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
+ 
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+ 
 # This is free software: you are free to change and redistribute it.
+ 
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Tue Jun 21 10:58:46 2022
+# Make data base, printed on Thu Jun 23 11:53:55 2022
 
 # Variables
 
+# makefile (from 'Makefile', line 77)
+git_description = $(shell git describe --always --dirty --tags --long)
 # environment
 GDK_BACKEND = x11
 # environment
@@ -19,11 +27,11 @@ LC_ALL = C
 # environment
 NO_AT_BRIDGE = 1
 # environment
-STARSHIP_SESSION_KEY = 3052514326134952
+STARSHIP_SESSION_KEY = 3072016801160693
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2153684c-7392-4f53-bb9e-8566be1d95b9.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-0ffd14cc-a742-4269-9c82-c565584d7dd6.sock
 # environment
 VSCODE_CWD = /home/rui
 # environment
@@ -69,7 +77,7 @@ VSCODE_CODE_CACHE_PATH = /home/rui/.config/Code/CachedData/30d9c6cd9483b2cc58668
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.BL52N1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.VCXKO1
 # default
 .LOADED := 
 # default
@@ -113,15 +121,15 @@ MAKEFILE_LIST := Makefile .envrc
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 3604
+VSCODE_PID = 27489
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# makefile (from 'Makefile', line 77)
-linker_flags = '-s -X main.buildTime=$(current_time)'
+# makefile (from 'Makefile', line 78)
+linker_flags = '-s -X main.buildTime=${current_time} -X main.version=${git_description}'
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/2719,unix/unix:/tmp/.ICE-unix/2719
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/2648,unix/unix:/tmp/.ICE-unix/2648
 # automatic
 *F = $(notdir $*)
 # environment
@@ -132,6 +140,8 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 <D = $(patsubst %/,%,$(dir $<))
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# makefile (from 'Makefile', line 91)
+production_host_ip = '138.68.152.180'
 # default
 MAKE_HOST := x86_64-redhat-linux-gnu
 # makefile
@@ -161,7 +171,7 @@ MAKEFILES :=
 # automatic
 ^F = $(notdir $^)
 # environment
-INVOCATION_ID = 3082383baaf3434aad1dd697641117ba
+INVOCATION_ID = f4d5c2133d264e2e8191f31e6b584941
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -187,7 +197,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := help
 # environment
-SYSTEMD_EXEC_PID = 2774
+SYSTEMD_EXEC_PID = 2699
 # environment
 HISTCONTROL = ignoredups
 # environment
@@ -201,7 +211,7 @@ MAKE_VERSION := 4.3
 # environment
 ASPNETCORE_Kestrel__Certificates__Default__Password = lagarto75
 # environment
-MANAGERPID = 2377
+MANAGERPID = 2310
 # environment
 which_declare = declare -f
 # environment
@@ -209,7 +219,7 @@ DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/
 # environment
 STARSHIP_SHELL = bash
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3604
+GIO_LAUNCHED_DESKTOP_FILE_PID = 27489
 # environment
 _ = /usr/bin/make
 # environment
@@ -219,7 +229,7 @@ NVM_CD_FLAGS =
 # environment
 GOMODCACHE = /home/rui/Workspace/go/pkg/mod
 # environment
-JOURNAL_STREAM = 8:38537
+JOURNAL_STREAM = 8:38265
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -251,7 +261,7 @@ DOTNET_ROOT = /usr/local/dotnet
 # environment
 GDMSESSION = gnome
 # variable set hash-table stats:
-# Load=117/1024=11%, Rehash=0, Collisions=5/149=3%
+# Load=119/1024=12%, Rehash=0, Collisions=5/151=3%
 
 # Pattern-specific Variable Values
 
@@ -259,9 +269,9 @@ GDMSESSION = gnome
 
 # Directories
 
-# . (device 41, inode 927912): 16 files, no impossibilities.
+# . (device 41, inode 927912): 17 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -282,9 +292,9 @@ run/api:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 25):
 	@go run ./cmd/api -db-dsn=${GREENLIGHT_DB_DSN}
+ 
 
 db/migrations/up: confirm
 #  Phony target (prerequisite of .PHONY).
@@ -298,7 +308,7 @@ db/migrations/up: confirm
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-15 10:55:46.102993009
+#  Last modified 2022-06-23 11:24:55.712997441
 #  File has been updated.
 #  Successfully updated.
 
@@ -307,10 +317,19 @@ build/api:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 82):
+#  recipe to execute (from 'Makefile', line 83):
 	@echo 'Building cmd/api...'
 	@go build -ldflags=${linker_flags} -o=./bin/api ./cmd/api
 	@GOOS=linux GOARCH=amd64 go build -ldflags=${linker_flags} -o=./bin/linux_amd64/api ./cmd/api
+
+production/deploy/api:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 101):
+	@rsync -rP --delete ./bin/linux_amd64/api ./migrations greenlight@${production_host_ip}:~
+	@ssh -t greenlight@${production_host_ip} 'migrate -path ~/migrations -database $$GREENLIGHT_DB_DSN up'
 
 vendor:
 #  Phony target (prerequisite of .PHONY).
@@ -330,6 +349,19 @@ vendor:
 #  Last modified 2022-06-09 18:02:46.026725403
 #  File has been updated.
 #  Successfully updated.
+
+production/configure/api.service:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 107):
+	@rsync -P ./remote/production/api.service greenlight@${production_host_ip}:~
+	@ssh -t greenlight@${production_host_ip} '\
+	sudo mv ~/api.service /etc/systemd/system/ \
+	&& sudo systemctl enable api \
+	&& sudo systemctl restart api \
+	'
 
 db/psql:
 #  Phony target (prerequisite of .PHONY).
@@ -385,25 +417,45 @@ audit: vendor
 	@echo 'Running tests...'
 	go test -race -vet=off ./...
 
-.PHONY: help confirm run/api db/psql db/migrations/new db/migrations/up audit vendor build/api
+production/connect:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 96):
+	@ssh greenlight@${production_host_ip}
+
+production/configure/caddyfile:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 117):
+	rsync -P ./remote/production/Caddyfile greenlight@${production_host_ip}:~
+	ssh -t greenlight@${production_host_ip} '\
+	sudo mv ~/Caddyfile /etc/caddy/ \
+	&& sudo systemctl reload caddy \
+	'
+
+.PHONY: help confirm run/api db/psql db/migrations/new db/migrations/up audit vendor build/api production/connect production/deploy/api production/configure/api.service production/configure/caddyfile
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=15/1024=1%, Rehash=0, Collisions=0/54=0%
+# Load=19/1024=2%, Rehash=0, Collisions=0/70=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 30 / storage = 265 B / avg = 8 B
-# current buf: size = 8162 B / used = 265 B / count = 30 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 35 / storage = 375 B / avg = 10 B
+# current buf: size = 8162 B / used = 375 B / count = 35 / avg = 10 B
 
-# strcache performance: lookups = 74 / hit rate = 59%
+# strcache performance: lookups = 95 / hit rate = 63%
 # hash-table stats:
-# Load=30/8192=0%, Rehash=0, Collisions=0/74=0%
-# Finished Make data base on Tue Jun 21 10:58:46 2022
+# Load=35/8192=0%, Rehash=0, Collisions=0/95=0%
+# Finished Make data base on Thu Jun 23 11:53:55 2022
 
  

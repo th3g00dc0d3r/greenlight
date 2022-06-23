@@ -1,0 +1,8 @@
+{
+    email rui.coutinho.rodrigues@gmail.com
+}
+
+greenlight-rui.ddns.net {
+    respond /debug/* "Not Permitted" 403
+    reverse_proxy localhost:4000
+}
