@@ -4,17 +4,12 @@ make: *** No rule to make target 'all'.  Stop.
 # GNU Make 4.3
  
 # Built for x86_64-redhat-linux-gnu
- 
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
- 
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
- 
 # This is free software: you are free to change and redistribute it.
- 
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Thu Jun 23 11:53:55 2022
+# Make data base, printed on Fri Jun 24 10:54:24 2022
 
 # Variables
 
@@ -27,11 +22,11 @@ LC_ALL = C
 # environment
 NO_AT_BRIDGE = 1
 # environment
-STARSHIP_SESSION_KEY = 3072016801160693
+STARSHIP_SESSION_KEY = 6899205921840741
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-0ffd14cc-a742-4269-9c82-c565584d7dd6.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-89fe8835-8e37-49bb-8de2-24f301cfe624.sock
 # environment
 VSCODE_CWD = /home/rui
 # environment
@@ -77,7 +72,7 @@ VSCODE_CODE_CACHE_PATH = /home/rui/.config/Code/CachedData/30d9c6cd9483b2cc58668
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.VCXKO1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.UMS8N1
 # default
 .LOADED := 
 # default
@@ -121,7 +116,7 @@ MAKEFILE_LIST := Makefile .envrc
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 27489
+VSCODE_PID = 3534
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -129,7 +124,7 @@ XDG_SESSION_TYPE = wayland
 # makefile (from 'Makefile', line 78)
 linker_flags = '-s -X main.buildTime=${current_time} -X main.version=${git_description}'
 # environment
-SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/2648,unix/unix:/tmp/.ICE-unix/2648
+SESSION_MANAGER = local/unix:@/tmp/.ICE-unix/2710,unix/unix:/tmp/.ICE-unix/2710
 # automatic
 *F = $(notdir $*)
 # environment
@@ -171,7 +166,7 @@ MAKEFILES :=
 # automatic
 ^F = $(notdir $^)
 # environment
-INVOCATION_ID = f4d5c2133d264e2e8191f31e6b584941
+INVOCATION_ID = 920fc3cc6b9241f68e6f098d49c37a9a
 # environment
 VSCODE_LOG_NATIVE = false
 # environment
@@ -197,7 +192,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := help
 # environment
-SYSTEMD_EXEC_PID = 2699
+SYSTEMD_EXEC_PID = 2763
 # environment
 HISTCONTROL = ignoredups
 # environment
@@ -211,7 +206,7 @@ MAKE_VERSION := 4.3
 # environment
 ASPNETCORE_Kestrel__Certificates__Default__Password = lagarto75
 # environment
-MANAGERPID = 2310
+MANAGERPID = 2371
 # environment
 which_declare = declare -f
 # environment
@@ -219,7 +214,7 @@ DEBUGINFOD_URLS = https://debuginfod.fedoraproject.org/
 # environment
 STARSHIP_SHELL = bash
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 27489
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3534
 # environment
 _ = /usr/bin/make
 # environment
@@ -229,7 +224,7 @@ NVM_CD_FLAGS =
 # environment
 GOMODCACHE = /home/rui/Workspace/go/pkg/mod
 # environment
-JOURNAL_STREAM = 8:38265
+JOURNAL_STREAM = 8:37794
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -289,17 +284,18 @@ confirm:
 
 run/api:
 #  Phony target (prerequisite of .PHONY).
+ 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 25):
 	@go run ./cmd/api -db-dsn=${GREENLIGHT_DB_DSN}
- 
 
 db/migrations/up: confirm
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
+ 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 42):
 	@echo 'Running up migrations...'
@@ -445,6 +441,7 @@ production/configure/caddyfile:
 # files hash-table stats:
 # Load=19/1024=2%, Rehash=0, Collisions=0/70=0%
 # VPATH Search Paths
+ 
 
 # No 'vpath' search paths.
 
@@ -456,6 +453,6 @@ production/configure/caddyfile:
 # strcache performance: lookups = 95 / hit rate = 63%
 # hash-table stats:
 # Load=35/8192=0%, Rehash=0, Collisions=0/95=0%
-# Finished Make data base on Thu Jun 23 11:53:55 2022
+# Finished Make data base on Fri Jun 24 10:54:24 2022
 
  
